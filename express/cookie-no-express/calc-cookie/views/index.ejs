@@ -1,0 +1,46 @@
+<form method="post" action="/calc" onsubmit="return valida_form(this)" >
+    <input type="text" name="num1" id="num1">
+    <select name="op" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" name="num2" id="num2">
+    <input type="submit" value="Calcular">
+</form>
+<script type="text/javascript" language="javascript">
+    function valida_form (){
+    if(document.getElementById("num1").value.length == "" ){
+    alert('Por favor, preencha o campo num1');
+    document.getElementById("num1").focus();
+    return false
+    }else if(document.getElementById("num2").value.length == "" ){
+    alert('Por favor, preencha o campo num2');
+    document.getElementById("num2").focus();
+    return false
+    }
+    }
+    </script>
+
+    
+
+<%if (contas.length > 0){ %>
+    <h2>Contas</h2>
+    <ul>
+
+        <% contas.forEach(conta => { %>
+            
+            
+            <li><%if (conta.total == null){ %>
+                 <h5><%= conta.total%>  Campo total é nulo <h5>
+                <%  } %>
+
+                <%= conta.num1%> <%= conta.op%> <%= conta.num2%> = <%= conta.total%> 
+            </li>
+            
+        <%  }) %>
+
+    </ul>
+
+<% } %>

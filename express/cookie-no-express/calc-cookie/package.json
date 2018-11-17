@@ -1,0 +1,17 @@
+{
+  "name": "calc-cookie",
+  "version": "1.0.0",
+  "description": "auth-authen",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "Ronny",
+  "license": "ISC",
+  "devDependencies": {
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.6"
+  }
+}
